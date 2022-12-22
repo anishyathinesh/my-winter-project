@@ -16,6 +16,8 @@
 		4F40F09D2953943500FB7683 /* my_winter_projectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40F09C2953943500FB7683 /* my_winter_projectTests.swift */; };
 		4F40F0A72953943500FB7683 /* my_winter_projectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40F0A62953943500FB7683 /* my_winter_projectUITests.swift */; };
 		4F40F0A92953943500FB7683 /* my_winter_projectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40F0A82953943500FB7683 /* my_winter_projectUITestsLaunchTests.swift */; };
+		4F67B5B72953D467002AAAAC /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67B5B62953D467002AAAAC /* IndexViewController.swift */; };
+		4F67B5B92953D4F4002AAAAC /* CreateBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67B5B82953D4F4002AAAAC /* CreateBoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		4F40F0A22953943500FB7683 /* my winter projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "my winter projectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F40F0A62953943500FB7683 /* my_winter_projectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_winter_projectUITests.swift; sourceTree = "<group>"; };
 		4F40F0A82953943500FB7683 /* my_winter_projectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_winter_projectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4F67B5B62953D467002AAAAC /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		4F67B5B82953D4F4002AAAAC /* CreateBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBoardViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				4F40F0852953943400FB7683 /* AppDelegate.swift */,
 				4F40F0872953943400FB7683 /* SceneDelegate.swift */,
 				4F40F0892953943400FB7683 /* ViewController.swift */,
+				4F67B5B62953D467002AAAAC /* IndexViewController.swift */,
+				4F67B5B82953D4F4002AAAAC /* CreateBoardViewController.swift */,
 				4F40F08B2953943400FB7683 /* Main.storyboard */,
 				4F40F08E2953943500FB7683 /* Assets.xcassets */,
 				4F40F0902953943500FB7683 /* LaunchScreen.storyboard */,
@@ -261,6 +267,8 @@
 				4F40F08A2953943400FB7683 /* ViewController.swift in Sources */,
 				4F40F0862953943400FB7683 /* AppDelegate.swift in Sources */,
 				4F40F0882953943400FB7683 /* SceneDelegate.swift in Sources */,
+				4F67B5B72953D467002AAAAC /* IndexViewController.swift in Sources */,
+				4F67B5B92953D4F4002AAAAC /* CreateBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
