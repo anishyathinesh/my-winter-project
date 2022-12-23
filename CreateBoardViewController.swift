@@ -6,15 +6,34 @@
 //
 
 import UIKit
+protocol titleEnteredDelegate{
+    func userDidEnterTitle(info:NSString)
+}
 
 class CreateBoardViewController: UIViewController {
  
     @IBOutlet weak var boardTitle: UITextField!
     
+    var delegate:titleEnteredDelegate? = nil
+
+    
+//    public var completionHandler: ((String?) -> Void)?
+    
     
     @IBAction func createBoardButton(_ sender: UIButton) {
-        print(boardTitle.text!)
+        if (delegate != nil){
+            let information:NSString = boardTitle.text! as NSString
+            
+            delegate!.userDidEnterTitle(info: information)
+            self.navigationController?.popViewController(animated: true)
+        }
+
+        
+//        completionHandler?(boardTitle.text)
+        
     }
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

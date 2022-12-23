@@ -8,10 +8,13 @@
 import UIKit
 
 
-class IndexViewController: UIViewController {
-    
-//    var buttonTitle: String = ""
 
+
+class IndexViewController: UIViewController, titleEnteredDelegate {
+    
+    var buttonTitle: String = ""
+    
+    
     @IBOutlet weak var boardStackView: UIStackView!  // the container for the views
     
 //    func configureStackView() { //add subviews onto boardStackV
@@ -24,10 +27,26 @@ class IndexViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
 //        configureStackView()
         
     }
+    
+    func userDidEnterTitle(info: NSString) {
+        print(info)
+    }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//        if segue.identifier == "showCreateScreen"{
+//            let createScreenVC:CreateBoardViewController = segue.destination as CreateBoardViewController
+//            createScreenVC.delegate = self
+//        }
+//    }
+    
+    
+    @IBAction func didTapRefresh(_ sender: UIButton) {
+
+        print(buttonTitle)
+    }
+    
 
 }

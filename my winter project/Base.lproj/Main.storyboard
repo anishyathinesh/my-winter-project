@@ -12,7 +12,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="my_winter_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
@@ -54,6 +53,7 @@
                         <outlet property="userName" destination="Vog-5J-yTn" id="Jfu-bB-hUr"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1817" y="-46"/>
         </scene>
@@ -66,11 +66,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tde-2U-aVl">
-                                <rect key="frame" x="0.0" y="854" width="430" height="44"/>
+                                <rect key="frame" x="-2" y="854" width="431" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEl-D0-ByD">
-                                <rect key="frame" x="0.0" y="849" width="430" height="49"/>
+                                <rect key="frame" x="-2" y="846" width="431" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="home" image="homekit" catalog="system" width="211.66666666666669" id="FJR-G2-n68">
@@ -80,7 +80,7 @@
                                         <imageReference key="image" image="pencil.tip" catalog="system" symbolScale="large" variableValue="1"/>
                                         <imageReference key="landscapeImage" image="scribble" catalog="system" symbolScale="large"/>
                                         <connections>
-                                            <segue destination="pTU-je-nv5" kind="presentation" id="hWM-jk-APx"/>
+                                            <segue destination="pTU-je-nv5" kind="presentation" identifier="showCreateScreen" id="fng-SY-CeV"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -89,10 +89,19 @@
                                 <toolbarAppearance key="standardAppearance"/>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RLz-Ku-o24">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="774"/>
+                                <rect key="frame" x="0.0" y="253" width="430" height="521"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.89142124639999998" blue="0.92916894319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZm-u4-YIb">
+                                <rect key="frame" x="176" y="120" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="refresh"/>
+                                <connections>
+                                    <action selector="didTapRefresh:" destination="Btf-c0-sqs" eventType="touchUpInside" id="ILn-Ir-Gra"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ffK-iZ-rhi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,12 +112,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Foi-fC-f4S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="-108"/>
+            <point key="canvasLocation" x="660" y="-108.15450643776825"/>
         </scene>
         <!--Create Board-->
         <scene sceneID="FpL-g2-H7q">
             <objects>
-                <viewController title="Create Board" id="pTU-je-nv5" customClass="CreateBoardViewController" customModule="my_winter_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createScreen" title="Create Board" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pTU-je-nv5" customClass="CreateBoardViewController" customModule="my_winter_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8TD-cA-LfY">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,7 +160,6 @@
                                 <connections>
                                     <action selector="createBoardButton:" destination="pTU-je-nv5" eventType="touchUpInside" id="EKL-Lp-wcj"/>
                                     <action selector="createBoardButton:" destination="pci-ld-ZCx" eventType="touchUpInside" id="OGh-8K-VUE"/>
-                                    <segue destination="Btf-c0-sqs" kind="presentation" modalPresentationStyle="fullScreen" id="9cO-h5-Gbq"/>
                                 </connections>
                             </button>
                         </subviews>
