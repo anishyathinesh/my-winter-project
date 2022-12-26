@@ -7,15 +7,40 @@
 
 import UIKit
 
+class Board {
+    var title: String
+    
+    init(boardTitle : String) {
+        title = boardTitle
+    }
+}
 
 
+class IndexViewController: UIViewController{
+    
+    var boardList: [Board] = []
+    var buttonList: [UIButton] = []
+    
+    @IBOutlet weak var boardStackView: UIStackView!
+    
+    
+    func makeButton(board: Board){
+        let myButton = UIButton(type: .system)
 
-class IndexViewController: UIViewController, titleEnteredDelegate {
+        myButton.frame = CGRect(x: 20, y: 20, width: 100, height: 50)
+
+        myButton.setTitle(board.title, for: .normal)
+
+        buttonList.insert(myButton, at: 0)
+        
+        for button in buttonList {
+            print(button)
+        }
+        
+        boardStackView.addArrangedSubview(buttonList[0])
+    }
     
-    var buttonTitle: String = ""
-    
-    
-    @IBOutlet weak var boardStackView: UIStackView!  // the container for the views
+
     
 //    func configureStackView() { //add subviews onto boardStackV
 //
@@ -26,26 +51,10 @@ class IndexViewController: UIViewController, titleEnteredDelegate {
 //
     override func viewDidLoad() {
         
+        
         super.viewDidLoad()
 //        configureStackView()
         
-    }
-    
-    func userDidEnterTitle(info: NSString) {
-        print(info)
-    }
-    
-//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-//        if segue.identifier == "showCreateScreen"{
-//            let createScreenVC:CreateBoardViewController = segue.destination as CreateBoardViewController
-//            createScreenVC.delegate = self
-//        }
-//    }
-    
-    
-    @IBAction func didTapRefresh(_ sender: UIButton) {
-
-        print(buttonTitle)
     }
     
 

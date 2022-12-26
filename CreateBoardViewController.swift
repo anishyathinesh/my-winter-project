@@ -14,25 +14,6 @@ class CreateBoardViewController: UIViewController {
  
     @IBOutlet weak var boardTitle: UITextField!
     
-    var delegate:titleEnteredDelegate? = nil
-
-    
-//    public var completionHandler: ((String?) -> Void)?
-    
-    
-    @IBAction func createBoardButton(_ sender: UIButton) {
-        if (delegate != nil){
-            let information:NSString = boardTitle.text! as NSString
-            
-            delegate!.userDidEnterTitle(info: information)
-            self.navigationController?.popViewController(animated: true)
-        }
-
-        
-//        completionHandler?(boardTitle.text)
-        
-    }
-    
     
     override func viewDidLoad() {
         
@@ -41,6 +22,32 @@ class CreateBoardViewController: UIViewController {
         
         
     }
+    @IBAction func didTapCreate(_ sender: UIButton) {
+        let indexVC = IndexViewController()
+        indexVC.boardList.insert(Board(boardTitle: boardTitle.text!), at: 0)
+        
+        indexVC.makeButton(board: indexVC.boardList[0])
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "backToIndex" {
+//            let indexVC = segue.destination as? IndexViewController
+//            if let title = boardTitle.text {
+//                indexVC?.buttonTitle = title
+//            }
+//
+//            indexVC?.boardList.append(Board(boardTitle: title ?? <#default value#> ?? <#default value#>!))
+//        }
+//    }
 
 }
 

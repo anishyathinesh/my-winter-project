@@ -62,15 +62,15 @@
             <objects>
                 <viewController title="Index" id="Btf-c0-sqs" customClass="IndexViewController" customModule="my_winter_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="46O-sP-ksA">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tde-2U-aVl">
-                                <rect key="frame" x="-2" y="854" width="431" height="44"/>
+                                <rect key="frame" x="-5" y="854" width="432" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEl-D0-ByD">
-                                <rect key="frame" x="-2" y="846" width="431" height="50"/>
+                                <rect key="frame" x="-5" y="774" width="432" height="51"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="home" image="homekit" catalog="system" width="211.66666666666669" id="FJR-G2-n68">
@@ -89,7 +89,7 @@
                                 <toolbarAppearance key="standardAppearance"/>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RLz-Ku-o24">
-                                <rect key="frame" x="0.0" y="253" width="430" height="521"/>
+                                <rect key="frame" x="0.0" y="219" width="430" height="555"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.89142124639999998" blue="0.92916894319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
@@ -106,8 +106,9 @@
                         <viewLayoutGuide key="safeArea" id="ffK-iZ-rhi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="c0F-aW-91r"/>
                     <connections>
-                        <outlet property="boardStackView" destination="RLz-Ku-o24" id="KJj-LD-8RQ"/>
+                        <outlet property="boardStackView" destination="RLz-Ku-o24" id="sy9-hR-4IE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Foi-fC-f4S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -150,34 +151,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6p-iM-Xol">
-                                <rect key="frame" x="117" y="778" width="197" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwe-RV-sRM">
+                                <rect key="frame" x="117" y="769" width="197" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="create" cornerStyle="capsule">
                                     <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="createBoardButton:" destination="pTU-je-nv5" eventType="touchUpInside" id="EKL-Lp-wcj"/>
-                                    <action selector="createBoardButton:" destination="pci-ld-ZCx" eventType="touchUpInside" id="OGh-8K-VUE"/>
+                                    <action selector="didTapCreate:" destination="pTU-je-nv5" eventType="touchUpInside" id="TMN-uD-eHW"/>
+                                    <segue destination="Btf-c0-sqs" kind="show" identifier="backToIndex" id="2Y5-VY-rfM"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fD7-tQ-9Ex"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="q6p-iM-Xol" firstAttribute="centerX" secondItem="fD7-tQ-9Ex" secondAttribute="centerX" id="3dQ-5Z-Lu6"/>
-                            <constraint firstItem="fD7-tQ-9Ex" firstAttribute="bottom" secondItem="q6p-iM-Xol" secondAttribute="bottom" constant="34" id="kh4-Ju-MWA"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="boardTitle" destination="TJu-hI-0Vx" id="uSs-jr-T2V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9y-5O-VN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="pci-ld-ZCx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1497" y="-229"/>
+            <point key="canvasLocation" x="1497" y="-263"/>
         </scene>
     </scenes>
     <resources>
